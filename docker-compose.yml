@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+    build:
+       context: .
+       args:
+        - PROXY_SERVER
+    ports:
+     - "3000:443"
+    volumes:
+     - ../dev:/usr/share/nginx/html/dev
+     - ../http-pub:/usr/share/nginx/html/http-pub
+     - ../http-pub/angapp/audience:/usr/share/nginx/html/http-pub/angapp/audience

@@ -1,0 +1,21 @@
+# this is our proxies to staging etc.
+
+# Jboss
+location /api/ {
+    proxy_pass   https://${PROXY_SERVER}/api/;
+}
+
+# Naming???
+location /v1/ {
+    proxy_pass   https://${PROXY_SERVER}/v1/;
+}
+
+# Publish API
+location /publish/ {
+    proxy_pass   https://${PROXY_SERVER}/publish/;
+}
+
+# Audience API
+location /audience/ {
+    proxy_pass   https://${PROXY_SERVER}/audience/;
+}
